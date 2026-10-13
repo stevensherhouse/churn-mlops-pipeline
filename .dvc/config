@@ -1,0 +1,6 @@
+[core]
+    remote = public
+['remote "local"']
+    url = ../dvc-remote
+['remote "public"']
+    url = https://stevensherhouse.github.io/churn-mlops-pipeline
