@@ -1,0 +1,21 @@
+data: data/churn.csv
+target: churn
+seed: 42
+test_size: 0.2
+validation_size: 0.25
+tracking_uri: sqlite:///mlflow.db
+experiment: customer-churn
+artifacts_dir: artifacts
+model:
+  type: random_forest
+  n_estimators: 100
+  max_depth: 8
+  min_samples_leaf: 2
+  class_weight: balanced
+thresholds:
+  roc_auc: 0.85
+  accuracy: 0.78
+  f1: 0.70
+monitoring:
+  drift_threshold: 0.25
+  report_dir: reports
